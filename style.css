@@ -1,0 +1,174 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #071522;
+  color: #eaf4ff;
+  line-height: 1.6;
+}
+
+header {
+  background: #102b40;
+  padding: 35px 20px;
+  text-align: center;
+  border-bottom: 2px solid #24c9c1;
+}
+
+.brand {
+  color: #43e0d0;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p:last-child {
+  color: #b9ccdc;
+}
+
+main {
+  width: min(1000px, 92%);
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: #102235;
+  border: 1px solid #29475d;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.panel h2 {
+  color: #43e0d0;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  background: #071522;
+  border: 1px solid #47647a;
+  border-radius: 6px;
+  color: #eaf4ff;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 18px;
+  background: #24c9c1;
+  color: #071522;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #71eee0;
+}
+
+#ticket-list {
+  overflow-wrap: anywhere;
+}
+
+.ticket {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #34546b;
+  border-radius: 8px;
+  background: #0a1b2a;
+}
+
+.ticket h3 {
+  margin-top: 0;
+  color: #43e0d0;
+}
+
+.ticket p {
+  font-size: 14px;
+}
+
+.ticket button {
+  margin-top: 8px;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  color: #9fb4c5;
+  padding: 25px 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-summary {
+  grid-column: 1 / -1;
+  background: #102b40;
+  border: 1px solid #29475d;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.dashboard-summary h2 {
+  color: #43e0d0;
+  margin-top: 0;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.summary-card {
+  background: #071522;
+  border: 1px solid #29475d;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.summary-card p {
+  color: #b9ccdc;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.summary-card h3 {
+  color: #43e0d0;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 650px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

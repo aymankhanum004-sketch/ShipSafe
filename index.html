@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShipSafe | Onboard IT Desk</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p class="brand">SHIPSAFE / MARITIME IT</p>
+    <h1>Onboard IT Operations Desk</h1>
+    <p>Shipboard IT support and security management simulator</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Log an IT Issue</h2>
+
+      <form id="ticket-form">
+        <label for="issue">Issue description</label>
+        <input id="issue" type="text"
+          placeholder="e.g. Crew laptop has no Wi-Fi"
+          required>
+
+        <label for="category">Issue category</label>
+        <select id="category">
+          <option>Network</option>
+          <option>Hardware</option>
+          <option>Software</option>
+          <option>Security</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select id="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+
+        <button type="submit">Create IT Ticket</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>IT Support Tickets</h2>
+      <p>Practice tracking onboard IT problems.</p>
+      <div id="ticket-list">
+        <p>No tickets yet. Create your first ticket!</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Security Reminders</h2>
+      <ul>
+        <li>Review suspicious login reports.</li>
+        <li>Keep authorized devices updated.</li>
+        <li>Document incidents and resolutions.</li>
+        <li>Follow approved onboard IT procedures.</li>
+      </ul>
+    </section>
+    
+<section class="panel">
+  <h2>Onboard Equipment Inventory</h2>
+  <p>Track equipment and its current condition.</p>
+
+  <form id="equipment-form">
+    <label for="equipment-name">Equipment name</label>
+    <input
+      id="equipment-name"
+      type="text"
+      placeholder="e.g. Crew Laptop 01"
+      required
+    >
+
+    <label for="equipment-type">Equipment type</label>
+    <select id="equipment-type">
+      <option>Laptop</option>
+      <option>Printer</option>
+      <option>Network Device</option>
+      <option>Desktop Computer</option>
+    </select>
+
+    <label for="equipment-location">Department or location</label>
+    <input
+      id="equipment-location"
+      type="text"
+      placeholder="e.g. Crew Office"
+      required
+    >
+
+    <label for="equipment-status">Condition</label>
+    <select id="equipment-status">
+      <option>Operational</option>
+      <option>Needs Maintenance</option>
+      <option>Out of Service</option>
+    </select>
+
+    <button type="submit">Add Equipment</button>
+  </form>
+
+  <div id="equipment-list">
+    <p>No equipment recorded yet.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Security Incident Log</h2>
+  <p>Record and track simulated security events.</p>
+
+  <form id="security-form">
+    <label for="incident-description">Incident description</label>
+    <input
+      id="incident-description"
+      type="text"
+      placeholder="e.g. Repeated failed login attempts"
+      required
+    >
+
+    <label for="incident-severity">Severity</label>
+    <select id="incident-severity">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <button type="submit">Record Incident</button>
+  </form>
+
+  <div id="security-list">
+    <p>No incidents recorded yet.</p>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    ShipSafe — Educational simulator using fictional data
+  </footer>
+</body>
+</html>
+
+<section class="dashboard-summary">
+  <h2>Operations Overview</h2>
+  <p>ShipSafe / IT status at a glance</p>
+
+  <div class="summary-grid">
+    <article class="summary-card">
+      <p>Total IT Tickets</p>
+      <h3 id="total-tickets">0</h3>
+    </article>
+
+    <article class="summary-card">
+      <p>Open Tickets</p>
+      <h3 id="open-tickets">0</h3>
+    </article>
+
+    <article class="summary-card">
+      <p>Resolved Tickets</p>
+      <h3 id="resolved-tickets">0</h3>
+    </article>
+
+    <article class="summary-card">
+      <p>Equipment Tracked</p>
+      <h3 id="total-equipment">0</h3>
+    </article>
+
+    <article class="summary-card">
+      <p>Security Incidents</p>
+      <h3 id="total-incidents">0</h3>
+    </article>
+  </div>
+</section>
